@@ -81,8 +81,8 @@
             @endforeach
             @endif
         </ul>
-        <div class="minicart" id="shoppingcartplace">
+        <!--<div class="minicart" id="shoppingcartplace">
             {{shopping_cart()}}
-        </div>
+        </div>-->
     </nav>
 </div>
