@@ -55,7 +55,7 @@
             @foreach(category_menu() as $key=>$menu)
             <li>
                 @if($menu->parent=='0')
-                <a href="{{category_url($menu)}}">{{$menu->nama}}</a>
+                <a href="{{category_url($menu)}}">{{content_trans($menu, 'Kategori', 'nama', $menu->nama)}}</a>
                     @if(count($menu->anak) >= 1)
                     <ul class="sub_menu">
                         @foreach($menu->anak as $key1=>$submenu)
@@ -81,8 +81,10 @@
             @endforeach
             @endif
         </ul>
-        <!--<div class="minicart" id="shoppingcartplace">
+        <!--
+        <div class="minicart" id="shoppingcartplace">
             {{shopping_cart()}}
-        </div>-->
+        </div>
+        -->
     </nav>
 </div>

@@ -8,7 +8,7 @@
                 <img src="{{URL::to(product_image_url($myproduk->gambar1,'medium'))}}" alt="{{$myproduk->nama}}" title="{{$myproduk->nama}}" onerror="this.src='//d3kamn3rg2loz7.cloudfront.net/img/no-image-product.png'">
             </a>
             <div class="product_info">
-                <h3><a href="{{product_url($myproduk)}}">{{short_description($myproduk->nama, 50)}}</a></h3>
+                <h3><a href="{{product_url($myproduk)}}">{{short_description(content_trans($myproduk, 'Produk', 'nama', $myproduk->nama), 50)}}</a></h3>
                 <small>{{short_description($myproduk->deskripsi,60)}}</small>
             </div>
             @if($setting->checkoutType!=2)
@@ -41,8 +41,8 @@
                 <img src="{{URL::to(product_image_url($myproduk->gambar1,'medium'))}}" alt="{{$myproduk->nama}}" onerror="this.src='//d3kamn3rg2loz7.cloudfront.net/img/no-image-product.png'">
             </a>
             <div class="product_info">
-                <h3><a href="{{product_url($myproduk)}}">{{short_description($myproduk->nama,50)}}</a></h3>
-                <small>{{short_description($myproduk->deskripsi,65)}}</small>
+                <h3><a href="{{product_url($myproduk)}}">{{short_description(content_trans($myproduk, 'Produk', 'nama', $myproduk->nama),50)}}</a></h3>
+                <p style="text-align:left;"><small>{{short_description($myproduk->deskripsi,65)}}</small></p>
             </div>
             @if($setting->checkoutType!=2)
             <div class="price_info">

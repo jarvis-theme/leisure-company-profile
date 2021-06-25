@@ -10,7 +10,7 @@
                         @if($menu->parent=='0')
                             @if(count($menu->anak) == 0)
                             <li>
-                                <a href="{{category_url($menu)}}" class="nobackground">{{$menu->nama}}</a>
+                                <a href="{{category_url($menu)}}" class="nobackground">{{content_trans($menu, 'Kategori', 'nama', $menu->nama)}}</a>
                             </li>
                             @elseif(count($menu->anak) >= 1)
                             <li class="menu_cont">
@@ -108,7 +108,7 @@
                             {{HTML::image(product_image_url($myproduk->gambar1, 'medium'), $myproduk->nama, array("onerror" => "this.src='//d3kamn3rg2loz7.cloudfront.net/img/no-image-product.png';"))}}
                         </a>
                         <div class="product_info" id="detailprod">
-                            <h3><a href="{{product_url($myproduk)}}">{{strtoupper($myproduk->nama)}}</a></h3>
+                            <h3><a href="{{product_url($myproduk)}}">{{strtoupper(content_trans($myproduk, 'Produk', 'nama', $myproduk->nama))}}</a></h3>
                             <small>{{short_description($myproduk->deskripsi,200)}}</small><a class="black" href="{{product_url($myproduk)}}">Lihat Produk</a>
                         </div>
                         <div class="price_info">
@@ -137,7 +137,7 @@
                             {{HTML::image(product_image_url($myproduk->gambar1,'medium'), $myproduk->nama, array("onerror" => "this.src='//d3kamn3rg2loz7.cloudfront.net/img/no-image-product.png';"))}}
                         </a>
                         <div class="product_info">
-                            <h3><a href="{{product_url($myproduk)}}">{{short_description(strtoupper($myproduk->nama), 23)}}</a></h3>
+                            <h3><a href="{{product_url($myproduk)}}">{{short_description(strtoupper(content_trans($myproduk, 'Produk', 'nama', $myproduk->nama)), 23)}}</a></h3>
                             <small>{{short_description($myproduk->deskripsi,65)}}</small>
                         </div>
                         @if($setting->checkoutType!=2)

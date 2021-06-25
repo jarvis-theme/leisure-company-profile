@@ -1,8 +1,8 @@
 	<div class="full_page">
-		<h1>{{$data->judul}}</h1>        
+		<h1>{{content_trans($data, 'Halaman', 'judul', $data->judul)}}</h1>        
 		<div class="page_sidebar">
 			<section id="main_content">
-				<div class="short-code-column">{{$data->isi}}</div>
+				<div class="short-code-column">{{content_trans($data, 'Halaman', 'isi', $data->isi)}}</div>
 			</section>
 			<aside id="sidebar">            	                
 				<ul class="arrow_li side_nav">

@@ -6,7 +6,7 @@
                 <li><span>{{$group->nama}}</span>
                     <ul>
                         @foreach($group->link as $key=>$link) 
-                        <li><a href="{{menu_url($link)}}">{{ ucfirst($link->nama) }}</a></li>
+                        <li><a href="{{menu_url($link)}}">{{ ucfirst(content_trans($link, 'Link', 'nama', $link->nama)) }}</a></li>
                         @endforeach
                     </ul>
                 </li>
